@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram Subscription Bot
+After=syslog.target network.target
+
+[Service]
+User=freddy
+Group=freddy
+WorkingDirectory=/home/freddy/fanticket_scraper
+Restart=always
+ExecStart=/usr/bin/env ruby fansale_telegram_registration.rb
+
+[Install]
+WantedBy=multi-user.target
